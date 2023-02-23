@@ -8,3 +8,7 @@ Project from Udemy course by Stephen Grider: [Go: The Complete Developer's Guide
 - receivers
 - custom types
 - slicing syntax
+
+## Build Instructions
+Ensure latest release of Go is available on your machine
+From root directory, use command `go run main.go deck.go`
