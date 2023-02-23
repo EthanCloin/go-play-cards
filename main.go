@@ -1,16 +1,15 @@
 package main
 
 import "fmt"
-
 func main() {
-	// var card string = "Ace of Spades"
-	card := newCard()
-	fmt.Println(card)
+	// interesting that this fxn declared in deck file doesn't need
+	// explicitly imported. what happens if i have two fxns of same 
+	// name ?
+	cards := newDeck()
+	// cards.print()
 
-	cards := []string {newCard(), "Ace of Clubs"}
-	fmt.Println(cards)
-}
-
-func newCard() string {
-	return "Five of Diamonds"
+	myHand, cards := dealHand(cards, 5)
+	myHand.print()
+	fmt.Println("REMAINING: ")
+	cards.print()
 }
