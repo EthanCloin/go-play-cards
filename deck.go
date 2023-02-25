@@ -1,6 +1,9 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"strings"
+)
 
 // a deck represents a slice of playing cards, represented
 // simply as strings of the form "<suit> of <rank>"
@@ -22,7 +25,11 @@ func (d deck) print(){
 // generates a new deck of 52 cards
 func newDeck() deck {
 	suits := []string{"Hearts", "Spades", "Clubs", "Diamonds"}
-	ranks := []string{"Ace", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine", "Ten", "Jack", "Queen", "King"}
+	ranks := []string {
+		"Ace", "Two", "Three", "Four", "Five", "Six", 
+		"Seven", "Eight", "Nine", "Ten", "Jack",
+		"Queen", "King",
+	}
 
 	newDeck := deck{}
 
@@ -40,4 +47,23 @@ func newDeck() deck {
 // deck. returns hand and updatedDeck
 func dealHand(d deck, handSize int) (deck, deck){
 	return d[:handSize], d[handSize:]
+}
+
+func (d deck) toString() string {
+	return strings.Join(d, ",")
+// 	stringified := ""
+
+// 	for _, card := range d {
+// 		stringified += card
+// 	}
+
+// 	return stringified
+}
+
+func saveToFile(){
+
+}
+
+func newDeckFromFile(){
+
 }

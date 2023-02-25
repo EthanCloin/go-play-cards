@@ -16,4 +16,6 @@ func main() {
 
 	fmt.Println("REMAINING IN DECK: ")
 	cards.print()
+
+	fmt.Println(cards.toString())
 }
